@@ -1,230 +1,229 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caueh Mota</title>
-  <meta name="description" content="Portfólio de Caueh Mota — estudante de tecnologia e desenvolvedor. / Portfolio of Caueh Mota — technology student and developer.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfólio de Caueh Mota — estudante de ADS na UNIFOR, desenvolvedor web em Fortaleza. Projetos, habilidades e contato.">
+<meta name="author" content="Caueh Bento de Lima Mota">
+<meta property="og:title" content="Caueh Mota">
+<meta property="og:description" content="Desenvolvedor web · Fortaleza, CE · ADS UNIFOR 2028">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vscaueh.github.io/">
+<link rel="canonical" href="https://vscaueh.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0d14'/%3E%3Cpath d='M16 6l10 10-10 10L6 16z' fill='%237c96ff'/%3E%3C/svg%3E">
+<title>Caueh Mota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="nav">
-    <a class="nav-logo" href="#" aria-label="Caueh Mota — início">
-      <span class="mono accent">~/</span>caueh
-    </a>
-    <nav class="nav-links" aria-label="Seções">
+<div class="wrap">
+  <nav class="nav" aria-label="Principal">
+    <div class="mark"><i></i>caueh.mota</div>
+    <div class="nav-links">
       <a href="#sobre" data-i18n="nav.about">Sobre</a>
       <a href="#projetos" data-i18n="nav.projects">Projetos</a>
       <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
-      <a href="#experiencia" data-i18n="nav.experience">Formação</a>
+      <a href="#trajetoria" data-i18n="nav.path">Trajetória</a>
       <a href="#contato" data-i18n="nav.contact">Contato</a>
-    </nav>
-    <div class="lang-switch" role="group" aria-label="Idioma / Language">
-      <button type="button" id="lang-pt" class="lang-btn is-active" aria-pressed="true">PT</button>
-      <span class="lang-sep" aria-hidden="true">/</span>
-      <button type="button" id="lang-en" class="lang-btn" aria-pressed="false">EN</button>
+    </div>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" id="lang-pt" data-lang="pt" aria-pressed="true">PT</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow" data-i18n="hero.eyebrow">Desenvolvedor · Fortaleza, CE</div>
+    <h1>Caueh<br>Mota<span class="thin">.</span></h1>
+    <p class="lede" data-i18n-html="hero.lede">Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> construindo aplicações web com foco em interfaces limpas, IA e dados.</p>
+    <div class="hero-meta">
+      <span><i class="dot"></i><span data-i18n="hero.open">Aberto a estágio em desenvolvimento</span></span>
+      <span>UNIFOR · <span data-i18n="hero.class">turma de 2028</span></span>
+      <span>Fortaleza <span id="clock">--:--</span> BRT</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#projetos" data-i18n="hero.cta1">Ver projetos</a>
+      <a class="btn" href="mailto:mcaueh@gmail.com" data-i18n="hero.cta2">Falar comigo</a>
     </div>
   </header>
 
-  <main>
-
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <p class="eyebrow mono"><span class="accent">//</span> <span data-i18n="hero.eyebrow">portfólio pessoal</span></p>
-      <h1 class="hero-title">Caueh Mota</h1>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">Estudante de tecnologia &amp; desenvolvedor</p>
-      <p class="hero-lead" data-i18n="hero.lead">
-        Construo projetos com código limpo e atenção ao design — de algoritmos
-        fundamentais a aplicações web. Este é o lugar onde eu documento essa jornada.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projetos" data-i18n="hero.cta">Ver projetos</a>
-        <a class="btn btn-ghost" href="https://github.com/vscaueh" target="_blank" rel="noopener">GitHub ↗</a>
+  <section id="sobre">
+    <div class="sec-head">
+      <div class="label" data-i18n="about.label">Sobre</div>
+      <h2 data-i18n="about.title">Aprendo construindo, e construo para pessoas reais.</h2>
+    </div>
+    <div class="about">
+      <div class="facts">
+        <div class="fact"><div class="k" data-i18n="about.f1k">Base</div><div class="v">Fortaleza, Ceará</div></div>
+        <div class="fact"><div class="k" data-i18n="about.f2k">Formação</div><div class="v" data-i18n="about.f2v">ADS · UNIFOR (2028)</div></div>
+        <div class="fact"><div class="k" data-i18n="about.f3k">Interesses</div><div class="v" data-i18n="about.f3v">IA, dados, produto</div></div>
+        <div class="fact"><div class="k" data-i18n="about.f4k">Idiomas</div><div class="v" data-i18n="about.f4v">Português · Inglês</div></div>
       </div>
-      <p class="hero-prompt mono" aria-hidden="true">
-        <span class="accent">$</span> git commit -m <span class="string">"<span data-i18n="hero.commit">sempre aprendendo</span>"</span><span class="cursor"></span>
-      </p>
-    </section>
-
-    <!-- ===== Sobre ===== -->
-    <section id="sobre" class="section">
-      <h2 class="section-title"><span class="mono accent section-slash">//</span> <span data-i18n="about.title">Sobre mim</span></h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p data-i18n="about.p1">
-            Sou o Caueh, estudante de tecnologia na Universidade de Fortaleza (Unifor).
-            Gosto de entender as coisas pela base: comecei implementando os algoritmos
-            fundamentais em Java e JavaScript antes de partir para projetos web.
-          </p>
-          <p data-i18n="about.p2">
-            Me interesso pela interseção entre tecnologia e design — código que funciona
-            bem e interfaces que fazem sentido para quem usa. Este portfólio é, ele mesmo,
-            um dos meus projetos: feito à mão com HTML, CSS e JavaScript.
-          </p>
-        </div>
-        <dl class="about-facts">
-          <div class="fact">
-            <dt class="mono" data-i18n="about.f1k">base</dt>
-            <dd>Fortaleza, CE — Brasil</dd>
-          </div>
-          <div class="fact">
-            <dt class="mono" data-i18n="about.f2k">formação</dt>
-            <dd>Unifor</dd>
-          </div>
-          <div class="fact">
-            <dt class="mono" data-i18n="about.f3k">foco atual</dt>
-            <dd data-i18n="about.f3v">Java, JavaScript e desenvolvimento web</dd>
-          </div>
-        </dl>
+      <div>
+        <p data-i18n-html="about.p1">Sou estudante de ADS na Universidade de Fortaleza e desenvolvo aplicações web desde antes de entrar na faculdade — como freelancer, <strong>criando sistemas para pequenos negócios</strong> que precisavam organizar pagamentos, clientes e rotinas.</p>
+        <p data-i18n-html="about.p2">Gosto da parte em que o problema vira interface: entender o que a pessoa precisa, desenhar o fluxo e entregar algo que funcione de verdade. Hoje estudo <strong>Java orientado a objetos</strong>, JavaScript e arquitetura front/back-end, e exploro como colocar <strong>IA dentro de produtos</strong> de um jeito útil, sem virar enfeite.</p>
+        <p data-i18n-html="about.p3">Fora do código, já fiz trabalho voluntário com <strong>acompanhamento financeiro</strong> e <strong>suporte de hardware</strong> — o que me ensinou a lidar com gente, prazos e máquinas que não cooperam.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== Projetos ===== -->
-    <section id="projetos" class="section">
-      <h2 class="section-title"><span class="mono accent section-slash">//</span> <span data-i18n="projects.title">Projetos</span></h2>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <div class="project-top">
-            <h3 class="project-name">AlgFundamentais</h3>
-            <a class="project-link mono" href="https://github.com/vscaueh/AlgFundamentais" target="_blank" rel="noopener" data-i18n="projects.code">código ↗</a>
+  <section id="projetos">
+    <div class="sec-head">
+      <div class="label" data-i18n="proj.label">Projetos</div>
+      <h2 data-i18n="proj.title">Coisas que publiquei ou estou desenhando.</h2>
+    </div>
+    <div class="projects">
+      <article class="project featured">
+        <div class="col">
+          <div class="status"><span class="pill live" data-i18n="proj.live">no ar</span><span>React · Vercel</span></div>
+          <h3><span data-i18n="p1.name">App de rotina de skincare</span><small data-i18n="p1.sub">nome provisório: skincicle</small></h3>
+          <p data-i18n="p1.desc">Aplicação que organiza e visualiza a rotina de skincare do usuário — manhã e noite, produtos, ordem e frequência — com um assistente de IA embutido para sugerir ajustes. Publicada com repositório público; o módulo de IA fica desativado por enquanto para não gerar custo de API.</p>
+          <div class="stack"><span>React</span><span>JavaScript</span><span>Vercel</span><span>LLM API</span><span>GitHub</span></div>
+          <div class="links">
+            <a href="https://github.com/vscaueh/SkynCycle" target="_blank" rel="noopener" data-i18n="proj.repo">Repositório</a>
+            <a href="https://vercel.com/" target="_blank" rel="noopener" data-i18n="proj.demo">Ver no ar</a>
           </div>
-          <p class="project-desc" data-i18n="projects.alg">
-            Implementação dos algoritmos fundamentais — ordenação, busca e estruturas de
-            dados — escrita em duas linguagens para comparar as abordagens.
-          </p>
-          <ul class="tags mono">
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li data-i18n="projects.alg.tag">algoritmos</li>
-          </ul>
-        </article>
+        </div>
+        <div class="preview" aria-hidden="true">
+          <div class="ph"><span data-i18n="pv.head">rotina · manhã</span><span>seg 07:30</span></div>
+          <div class="step done"><b>✓</b><span class="t" data-i18n="pv.s1">Limpeza suave</span><span class="d">1×</span></div>
+          <div class="step done"><b>✓</b><span class="t" data-i18n="pv.s2">Vitamina C</span><span class="d">1×</span></div>
+          <div class="step"><b>3</b><span class="t" data-i18n="pv.s3">Hidratante</span><span class="d">1×</span></div>
+          <div class="step"><b>4</b><span class="t" data-i18n="pv.s4">Protetor solar FPS 50</span><span class="d" data-i18n="pv.s4d">a cada 3h</span></div>
+          <div class="ai-note"><i></i><span data-i18n="pv.ai">assistente de IA · desligado</span></div>
+        </div>
+      </article>
 
-        <article class="project-card">
-          <div class="project-top">
-            <h3 class="project-name">SkynCycle</h3>
-            <a class="project-link mono" href="https://github.com/vscaueh/SkynCycle" target="_blank" rel="noopener" data-i18n="projects.code">código ↗</a>
-          </div>
-          <p class="project-desc" data-i18n="projects.skyn">
-            Aplicação web em JavaScript, atualmente em desenvolvimento. Em breve com mais
-            detalhes por aqui.
-          </p>
-          <ul class="tags mono">
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </article>
+      <article class="project">
+        <div class="status"><span class="pill concept" data-i18n="proj.concept">conceito</span><span>2026</span></div>
+        <h3>ORION<small data-i18n="p2.sub">assistente pessoal com memória</small></h3>
+        <p data-i18n="p2.desc">Projeto de estudo para um assistente estilo Jarvis: arquitetura front/back-end, integração com APIs e um sistema de memória que lembra contexto entre conversas. Ainda no papel, mas é onde estou aprendendo mais sobre como IA se encaixa em software.</p>
+        <div class="stack"><span>APIs</span><span>Node</span><span data-i18n="p2.stack">Memória</span><span data-i18n="p2.stack2">Arquitetura</span></div>
+      </article>
 
-        <article class="project-card">
-          <div class="project-top">
-            <h3 class="project-name" data-i18n="projects.thisname">Este portfólio</h3>
-            <a class="project-link mono" href="https://github.com/vscaueh/Portf-lio" target="_blank" rel="noopener" data-i18n="projects.code">código ↗</a>
-          </div>
-          <p class="project-desc" data-i18n="projects.this">
-            Site bilíngue (PT/EN) construído do zero, sem frameworks: HTML semântico,
-            CSS puro e um pouco de JavaScript para a troca de idioma.
-          </p>
-          <ul class="tags mono">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </article>
+      <article class="project">
+        <div class="status"><span class="pill" data-i18n="proj.freelance">freelance</span><span>2025–2026</span></div>
+        <h3><span data-i18n="p3.name">Sistemas para pequenos negócios</span><small data-i18n="p3.sub">projetos sob demanda</small></h3>
+        <p data-i18n="p3.desc">Aplicações web feitas sob medida para clientes locais: gestão de pagamentos, cadastro de clientes e painéis simples. Stack leve (React + Firebase) com deploy contínuo, pensada para quem precisa de algo que funcione sem equipe de TI.</p>
+        <div class="stack"><span>React</span><span>Firebase</span><span>HTML/CSS</span><span>Netlify</span></div>
+      </article>
 
+      <article class="project">
+        <div class="status"><span class="pill" data-i18n="proj.study">estudos</span><span>Java · JS</span></div>
+        <h3>AlgFundamentais<small data-i18n="p4.sub">algoritmos fundamentais em duas linguagens</small></h3>
+        <p data-i18n="p4.desc">Implementação dos algoritmos fundamentais — ordenação, busca e estruturas de dados — escrita em Java e em JavaScript para comparar as abordagens e firmar a base antes dos frameworks.</p>
+        <div class="stack"><span>Java</span><span>JavaScript</span><span data-i18n="p4.stack">Algoritmos</span></div>
+        <div class="links">
+          <a href="https://github.com/vscaueh/AlgFundamentais" target="_blank" rel="noopener" data-i18n="proj.repo">Repositório</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="status"><span class="pill" data-i18n="proj.oss">código aberto</span><span>2026</span></div>
+        <h3><span data-i18n="p5.name">Este portfólio</span><small>vscaueh.github.io</small></h3>
+        <p data-i18n="p5.desc">O site que você está vendo: bilíngue (PT/EN), tema escuro com tokens CSS e zero frameworks — HTML semântico, CSS puro e um único script para a troca de idioma e o relógio local.</p>
+        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="links">
+          <a href="https://github.com/vscaueh/Portf-lio" target="_blank" rel="noopener" data-i18n="proj.repo">Repositório</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="sec-head">
+      <div class="label" data-i18n="sk.label">Habilidades</div>
+      <h2 data-i18n="sk.title">O que uso hoje e o que estou aprofundando.</h2>
+    </div>
+    <div class="skills">
+      <div class="skill-group">
+        <h4>Front-end</h4>
+        <ul>
+          <li>JavaScript <em data-i18n="lv.daily">uso diário</em></li>
+          <li>React <em data-i18n="lv.daily">uso diário</em></li>
+          <li>HTML &amp; CSS <em data-i18n="lv.daily">uso diário</em></li>
+          <li data-i18n-html="sk.ui">Design de interface <em>em estudo</em></li>
+        </ul>
       </div>
-    </section>
+      <div class="skill-group">
+        <h4>Back-end &amp; dados</h4>
+        <ul>
+          <li>Java (POO) <em data-i18n="lv.study">em estudo</em></li>
+          <li>Firebase <em data-i18n="lv.projects">em projetos</em></li>
+          <li data-i18n-html="sk.api">APIs REST <em>em projetos</em></li>
+          <li data-i18n-html="sk.ai">Integração com LLMs <em>em estudo</em></li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4 data-i18n="sk.tools">Ferramentas &amp; idiomas</h4>
+        <ul>
+          <li>Git &amp; GitHub <em data-i18n="lv.daily">uso diário</em></li>
+          <li>Vercel · Netlify <em>deploy</em></li>
+          <li>IntelliJ · VS Code <em>IDE</em></li>
+          <li data-i18n-html="sk.lang">Inglês <em>avançado</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== Habilidades ===== -->
-    <section id="habilidades" class="section">
-      <h2 class="section-title"><span class="mono accent section-slash">//</span> <span data-i18n="skills.title">Habilidades</span></h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3 class="skill-label mono" data-i18n="skills.langs">linguagens</h3>
-          <ul class="tags mono">
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-label mono" data-i18n="skills.tools">ferramentas</h3>
-          <ul class="tags mono">
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>VS Code</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-label mono" data-i18n="skills.learning">estudando agora</h3>
-          <ul class="tags mono">
-            <li data-i18n="skills.l1">estruturas de dados</li>
-            <li data-i18n="skills.l2">desenvolvimento web</li>
-          </ul>
+  <section id="trajetoria">
+    <div class="sec-head">
+      <div class="label" data-i18n="tl.label">Trajetória</div>
+      <h2 data-i18n="tl.title">Onde estive e para onde estou indo.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl">
+        <div class="when" data-i18n="tl1.when">2025 — 2028</div>
+        <div>
+          <h3 data-i18n="tl1.title">Análise e Desenvolvimento de Sistemas</h3>
+          <div class="org">Universidade de Fortaleza (UNIFOR)</div>
+          <p data-i18n="tl1.desc">Tecnólogo com foco em programação orientada a objetos, estruturas de dados, algoritmos e desenvolvimento de software. Disciplinas de empreendedorismo e experiência prática em projetos.</p>
         </div>
       </div>
-    </section>
+      <div class="tl">
+        <div class="when" data-i18n="tl2.when">2025 — hoje</div>
+        <div>
+          <h3 data-i18n="tl2.title">Desenvolvedor web freelancer</h3>
+          <div class="org" data-i18n="tl2.org">Pequenos negócios · Fortaleza</div>
+          <p data-i18n="tl2.desc">Levantamento de requisitos direto com o cliente, desenvolvimento em React e Firebase, deploy e suporte pós-entrega.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <div class="when" data-i18n="tl3.when">Voluntariado</div>
+        <div>
+          <h3 data-i18n="tl3.title">Acompanhamento financeiro e suporte de hardware</h3>
+          <div class="org" data-i18n="tl3.org">Trabalho voluntário</div>
+          <p data-i18n="tl3.desc">Controle e monitoramento de finanças, além de manutenção e suporte técnico de computadores e periféricos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== Experiência / Formação ===== -->
-    <section id="experiencia" class="section">
-      <h2 class="section-title"><span class="mono accent section-slash">//</span> <span data-i18n="exp.title">Formação &amp; experiência</span></h2>
-      <ol class="timeline">
-        <li class="timeline-item">
-          <p class="timeline-when mono" data-i18n="exp.e1when">em andamento</p>
-          <h3 class="timeline-what" data-i18n="exp.e1what">Graduação em Tecnologia</h3>
-          <p class="timeline-where">Universidade de Fortaleza (Unifor)</p>
-          <p class="timeline-desc" data-i18n="exp.e1desc">
-            Fundamentos de computação, lógica e desenvolvimento de software.
-          </p>
-        </li>
-        <li class="timeline-item">
-          <p class="timeline-when mono">2025 —</p>
-          <h3 class="timeline-what" data-i18n="exp.e2what">Projetos pessoais</h3>
-          <p class="timeline-where">GitHub</p>
-          <p class="timeline-desc" data-i18n="exp.e2desc">
-            Estudo por meio de prática: algoritmos fundamentais em Java e JS,
-            aplicações web e este portfólio.
-          </p>
-        </li>
-      </ol>
-    </section>
+  <section id="contato">
+    <div class="sec-head">
+      <div class="label" data-i18n="ct.label">Contato</div>
+      <h2 data-i18n="ct.title">Vamos conversar.</h2>
+    </div>
+    <div class="contact">
+      <div>
+        <p data-i18n="ct.p">Estou procurando uma vaga de estágio em desenvolvimento onde eu possa aprender rápido e contribuir de verdade. Se você tem uma oportunidade, um projeto ou só quer trocar ideia, me escreve.</p>
+        <a class="email" href="mailto:mcaueh@gmail.com">mcaueh@gmail.com</a>
+      </div>
+      <div class="contact-list">
+        <a href="https://github.com/vscaueh" target="_blank" rel="noopener"><span class="k">GitHub</span><span>github.com/vscaueh</span><span class="arr">↗</span></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span>linkedin.com/in/caueh</span><span class="arr">↗</span></a>
+        <a href="mailto:mcaueh@gmail.com"><span class="k">E-mail</span><span>mcaueh@gmail.com</span><span class="arr">↗</span></a>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== Contato ===== -->
-    <section id="contato" class="section section-contact">
-      <h2 class="section-title"><span class="mono accent section-slash">//</span> <span data-i18n="contact.title">Contato</span></h2>
-      <p class="contact-lead" data-i18n="contact.lead">
-        Aberto a conversas sobre projetos, estágios e colaborações.
-        O jeito mais rápido de me encontrar:
-      </p>
-      <ul class="contact-list">
-        <li>
-          <span class="contact-key mono">e-mail</span>
-          <a href="mailto:motta.caueh@edu.unifor.br">motta.caueh@edu.unifor.br</a>
-        </li>
-        <li>
-          <span class="contact-key mono">github</span>
-          <a href="https://github.com/vscaueh" target="_blank" rel="noopener">github.com/vscaueh</a>
-        </li>
-        <li>
-          <span class="contact-key mono">linkedin</span>
-          <!-- TODO: troque pela URL do seu perfil no LinkedIn -->
-          <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">linkedin.com/in/…</a>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <p class="mono"><span class="accent">©</span> 2026 Caueh Mota — <span data-i18n="footer.made">feito à mão com HTML, CSS e JS</span></p>
+  <footer>
+    <span>© 2026 Caueh Bento de Lima Mota</span>
+    <span data-i18n="foot">Feito à mão em Fortaleza · UTC−3</span>
   </footer>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
