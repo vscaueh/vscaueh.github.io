@@ -46,4 +46,3 @@ Basta abrir o `index.html` no navegador — não precisa de servidor nem de inst
 - Textos em português: direto no `index.html`.
 - Traduções em inglês: no objeto `I18N.en` em `script.js`.
 - Cores e fontes: nas variáveis no topo do `style.css` (`:root`).
-- **Lembretes:** confirmar a URL do LinkedIn e o link "Ver no ar" do app de skincare no `index.html`.
